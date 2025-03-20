@@ -1,0 +1,18 @@
+package com.java.leave.model;
+
+import java.util.Date;
+
+public class Leave {
+	
+	private int leaveid;
+	private int empid;
+	private String empName;
+	private Date leaveStDate;
+	private Date leaveEndDate;
+	private int noDays;
+	private String LeaveReason;
+	private LeaveType Ltype;
+	
+	
+
+}

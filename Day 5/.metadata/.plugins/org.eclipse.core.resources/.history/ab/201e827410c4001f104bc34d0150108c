@@ -1,0 +1,26 @@
+package com.java.exception;
+
+import java.util.Scanner;
+
+public class ThrowEx {
+	
+	public void check(int n) {
+		if(n<0) {
+			throw new ArithmeticException("Negative number are not allowed");
+		}else if(n==0) {
+			throw new ArithmeticException("Zero is Invalid value");
+		}else {
+			System.out.println("N value is "+n);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value of n ");
+		int n = sc.nextInt();
+		
+		ThrowEx obj = new ThrowEx();
+		obj.check(n);
+	}
+
+}

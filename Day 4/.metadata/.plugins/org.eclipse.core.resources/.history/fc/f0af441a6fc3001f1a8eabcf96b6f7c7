@@ -1,0 +1,5 @@
+package com.java.employ.dao;
+
+public class EmployDaoImpl {
+
+}

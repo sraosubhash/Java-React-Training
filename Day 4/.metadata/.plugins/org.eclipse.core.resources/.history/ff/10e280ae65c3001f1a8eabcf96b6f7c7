@@ -1,0 +1,21 @@
+package com.java.genrics;
+
+
+class Test{
+	public void swap(int a, int b) {
+		int t;
+		t=a;
+		a=b;
+		b=t;
+		System.out.println("A value "+a+" B value "+b);
+	
+	}
+}
+public class GenEx1 {
+	public static void main(String[] args) {
+		Test test = new Test();
+		int a=7, b=9;
+		test.swap(a, b);
+	}
+
+}

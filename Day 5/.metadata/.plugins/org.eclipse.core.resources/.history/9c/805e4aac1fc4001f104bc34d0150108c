@@ -1,0 +1,33 @@
+package com.java.employ.blay;
+
+import com.java.employ.dao.EmployDao;
+import com.java.employ.dao.EmployDaoImp;
+import com.java.employ.model.Employ;
+
+public class EmployBlay {
+	
+	static EmployDao empDao;
+	StringBuilder sb;
+	
+	static {
+		empDao = new EmployDaoImp();
+	}
+	
+	public boolean validateEmploy(Employ emp) {
+		sb = new StringBuilder();
+		boolean isValid = true;
+		if(emp.getEmpno()<0 || emp.getEmpno() == 0) {
+			sb.append("Emloy number cannot be negative or zero");
+			isValid = false;
+		}
+		if(emp.getName().length()<5) {
+			sb.append("Employ name must contain 5 characters ");
+			isValid = false;
+		}
+		if(emp.getBasic()>80000 || emp.getBasic()<10000) {
+			sb.append("Employ basic must be between 10000 and 80000");
+			
+		}
+	}
+
+}

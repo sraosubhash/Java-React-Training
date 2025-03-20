@@ -1,0 +1,5 @@
+package com.java.leave.dao;
+
+public class LeaveException {
+
+}

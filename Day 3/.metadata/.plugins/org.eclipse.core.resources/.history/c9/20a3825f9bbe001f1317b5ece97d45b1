@@ -1,0 +1,41 @@
+package com.java.project;
+
+import java.util.Scanner;
+
+public class EmployMain {
+	
+	static EmployOps empOps;
+	
+	static {
+		empOps = new EmployOps();
+	}
+	
+	public static void readEmpMain() {
+		empOps.readEmp();
+	}
+	
+	public static void showEmpMain() {
+		Employ[] arr = empOps.showEmploy();
+		for (Employ emp : arr) {
+			System.out.println(emp);
+		}
+	}
+	public static void searchEmpMain() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the employ id to seach record");
+		int x = sc.nextInt();
+		Employ empFound = empOps.searchEmploy(x);
+		if(empFound!=null) {
+			System.out.println(empFound);
+		}else {
+			System.out.println("*** Employ not foud ***");
+		}
+	}
+	
+	public static void main(String[] args) {
+		readEmpMain();
+		showEmpMain();
+		searchEmpMain();
+	}
+
+}

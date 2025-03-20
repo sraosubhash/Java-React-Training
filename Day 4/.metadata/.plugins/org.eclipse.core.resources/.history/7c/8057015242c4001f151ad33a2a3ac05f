@@ -1,0 +1,75 @@
+package com.java.assignment;
+
+import java.util.Scanner;
+
+public class Program1 {
+	
+	public int getStringLength(String str) {
+		int count = 0;
+		char[] ch = str.toCharArray();
+		for (char c : ch) {
+			count++;
+			
+		}
+		return count;
+	}
+	
+	public String setStringUpper(String str) {
+		char[] ch = str.toCharArray();
+		String result = "";
+		for (char c : ch) {
+			if((int)c >=97 && (int)c <=122) {
+				result+=(char)((int)c - 32);
+			}
+			else {
+				result+=c;
+			} 
+		}
+		return result;
+	}
+	
+	public String setStringLower(String str) {
+		char[] ch = str.toCharArray();
+		String result = "";
+		for (char c : ch) {
+			if((int)c >=65 && (int)c <=90) {
+				result+=(char)((int)c + 32);
+			}
+			else {
+				result+=c;
+			} 
+		}
+		return result;
+	}
+	
+	public int charPosition(String str, char n) {
+		char[] ch = str.toCharArray();
+		for(int i=0; i<ch.length; i++) {
+			if(ch[i]==n) {
+				return i;
+			}
+			
+		}
+		return 0;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a string : ");
+		String str = sc.next();
+		
+		Program1 obj = new Program1();
+		System.out.println("Length of a string is "+ obj.getStringLength(str));
+		System.out.println("Capitalizing string : "+obj.setStringUpper(str));
+		System.out.println("De-Capitalizing string : "+obj.setStringLower(str));
+		System.out.println("Enter a charater to find it's location ");
+		char n = sc.next().charAt(0);
+		System.out.println("Character "+n+" found at "+obj.charPosition(str, n));
+		
+		
+		
+	}
+
+}

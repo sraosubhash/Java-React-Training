@@ -1,0 +1,54 @@
+package com.java.project;
+
+import java.util.Scanner;
+
+public class EmployOps {
+	
+	static Scanner sc;
+	static Employ[] arrEmp;
+	static int totalEmp;
+	static boolean flag;
+	
+	
+	static {
+		sc = new Scanner(System.in);
+		System.out.println("Enter total Employee Records");
+		totalEmp = sc.nextInt();
+		arrEmp = new Employ[totalEmp];
+		flag = false;
+	}
+	
+	public void readEmp() {
+		System.out.println("Enter "+totalEmp+" Records of Employee");
+		for(int i =0; i<totalEmp; i++) {
+			System.out.println("Enter Empid,Name, City, Salary for Employ"+ (i+1));
+			arrEmp[i] = new Employ();
+			arrEmp[i].Empid = sc.nextInt();
+			arrEmp[i].name = sc.next();
+			arrEmp[i].city = sc.next();
+			arrEmp[i].salary = sc.nextDouble();
+		}flag = true;
+	}
+	
+	public Employ[] showEmploy() {
+		return arrEmp;
+	}
+	
+	public Employ searchEmploy(int Empid) {
+		Employ empFound = null;
+		if(flag==false) {
+			return empFound;
+		}
+		
+		for (Employ emp : arrEmp) {
+			if (emp.Empid == Empid) {
+				empFound = emp;
+				break;
+			}
+			
+		}
+		return empFound;
+	}
+	
+
+}

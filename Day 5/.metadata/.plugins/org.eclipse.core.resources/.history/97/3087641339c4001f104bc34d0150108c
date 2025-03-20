@@ -1,0 +1,18 @@
+package com.java.employ.main;
+
+import javax.crypto.BadPaddingException;
+
+public class ds {
+	
+	public int addtwonum(int a, int b) {
+		int c = a+b;
+		return c;
+	}
+	
+	public static void main(String[] args) {
+		
+		addtwonum obj = new addtwonum();
+		obj(5,6);
+	}
+
+}

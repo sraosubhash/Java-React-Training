@@ -1,0 +1,63 @@
+package com.java.employ.blay;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+import com.java.employ.dao.EmployDao;
+import com.java.employ.dao.EmployDaoImp;
+import com.java.employ.exception.EmployException;
+import com.java.employ.model.Employ;
+
+public class EmployBlay {
+	
+	static EmployDao empDao;
+	static StringBuilder sb;
+	static Scanner sc;
+	
+	static {
+		empDao = new EmployDaoImp();
+		sc = new Scanner(System.in);
+	}
+	
+	public boolean validateEmploy(Employ emp) {
+		sb = new StringBuilder();
+		boolean isValid = true;
+		if(emp.getEmpno()<0 || emp.getEmpno() == 0) {
+			sb.append("Emloy number cannot be negative or zero\n");
+			isValid = false;
+		}
+		if(emp.getName().length()<5) {
+			sb.append("Employ name must contain 5 characters \n");
+			isValid = false;
+		}
+		if(emp.getBasic()>80000 || emp.getBasic()<10000) {
+			sb.append("Employ basic must be between 10000 and 80000\n");
+			isValid = false;
+		}
+		
+		Date today = new Date();
+		long ms = today.getTime() - emp.getDob().getTime();
+		long days = (ms / 1000*60*60*24);
+		days++;
+		if(days<1) {
+			sb.append("Dob cannot be tomorrow's date...\n");
+			isValid = false;
+		}
+		return isValid;
+	}
+	
+	public String addEmployBlay(Employ emp) throws EmployException {
+		if (validateEmploy(emp)) {
+			return empDao.addEmployDao(emp);
+		}
+		throw new EmployException(sb.toString());
+	}
+	
+	public List<Employ> showEmployBlay(){
+		return empDao.showEmployDao();
+	}
+	
+	
+	
+}

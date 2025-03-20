@@ -1,0 +1,26 @@
+package com.java.exception;
+
+public class ArrayEx {
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {12,8,5};
+		
+		try {
+			arr[9]=7;
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.err.println("Array size is smaller than index specified");
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+		
+		for (int i : arr) {
+			System.out.println(i);			
+		}
+		
+		}
+	}
+
+}

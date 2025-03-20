@@ -1,0 +1,41 @@
+package com.java.leave.blay;
+
+import java.util.Date;
+import java.util.Scanner;
+
+import com.java.leave.dao.LeaveDao;
+import com.java.leave.dao.LeaveDaoImp;
+import com.java.leave.exception.LeaveException;
+import com.java.leave.model.Leave;
+
+public class LeaveBlay {
+	
+	static LeaveDao levDao;
+	static StringBuilder sb;
+	static Scanner sc;
+	
+	static {
+		levDao = new LeaveDaoImp();
+		sc = new Scanner(System.in);
+	}
+	
+	public boolean validateLeave(Leave lev) {
+		sb = new StringBuilder();
+		boolean isValid = true;
+		Date today = new Date();
+		long ms =  today.getTime();
+		long days;
+		if (days<1) {
+			
+		}
+		
+	}
+	
+	public String addLeaveBlay(Leave lev) {
+		if (validateLeave(lev)) {
+			return levDao.addLeaveDao(lev);
+		}
+		throw new LeaveException(sb.toString())
+	}
+
+}

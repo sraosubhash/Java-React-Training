@@ -1,0 +1,20 @@
+package com.java.employ.blay;
+
+import com.java.employ.dao.EmployDao;
+import com.java.employ.dao.EmployDaoImp;
+import com.java.employ.model.Employ;
+
+public class EmployBlay {
+	
+	static EmployDao empDao;
+	StringBuilder sb;
+	
+	static {
+		empDao = new EmployDaoImp();
+	}
+	
+	public boolean validateEmploy(Employ emp) {
+		sb = new StringBuilder();
+	}
+
+}

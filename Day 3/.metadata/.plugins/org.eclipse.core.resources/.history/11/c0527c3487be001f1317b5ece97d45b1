@@ -1,0 +1,9 @@
+package com.java.cons;
+
+public class Demo {
+	
+	int a,b ;
+	a=5;
+	b=7;
+
+}

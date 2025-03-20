@@ -1,0 +1,24 @@
+package com.java.genrics;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.java.collections.Employ;
+
+public class SortEmploy {
+	
+	public static void main(String[] args) {
+		SortedSet<Employ> empList = new TreeSet<Employ>();
+		
+		empList.add(new Employ(1,"ASH",26998.87));
+		empList.add(new Employ(2,"Subhash",98173));
+		empList.add(new Employ(3,"Zoro",31279));
+		empList.add(new Employ(4,"Kirito",82389));
+		
+		System.out.println("Employ Records are");
+		for (Employ employ : empList) {
+			System.out.println(employ);
+		}
+	}
+
+}

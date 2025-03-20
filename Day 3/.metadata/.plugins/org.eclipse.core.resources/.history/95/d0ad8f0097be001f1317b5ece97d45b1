@@ -1,0 +1,19 @@
+package com.java.project;
+
+public class EmployMain {
+	
+	static EmployOps empOps;
+	
+	static {
+		empOps = new EmployOps();
+	}
+	
+	public static void readEmpMain() {
+		empOps.readEmp();
+	}
+	
+	public static void main(String[] args) {
+		readEmpMain();
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.java.employ.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.java.employ.model.Employ;
+
+public class EmployDaoImpl implements EmployDao{
+	
+	static List<Employ> empList;
+	
+	static {
+		empList = new ArrayList<Employ>()
+	}
+
+	@Override
+	public List<Employ> showEmployDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addEmployDao(Employ employ) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

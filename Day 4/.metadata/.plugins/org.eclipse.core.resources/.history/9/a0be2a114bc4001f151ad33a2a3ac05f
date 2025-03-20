@@ -1,0 +1,109 @@
+package com.java.assignment;
+
+public class Program2 {
+	public static String numberToRoman(int num) {
+        if (num < 1 || num > 9999) {
+            return "Number out of range (1-9999 only)";
+        }
+
+        String roman = ""; // Use a string to store the Roman numeral
+
+        // Process thousands place
+        int thousands = num / 1000;
+        if (thousands > 0) {
+            roman += getRomanThousands(thousands);
+        }
+        num %= 1000;
+
+        // Process hundreds place
+        int hundreds = num / 100;
+        if (hundreds > 0) {
+            roman += getRomanHundreds(hundreds);
+        }
+        num %= 100;
+
+        // Process tens place
+        int tens = num / 10;
+        if (tens > 0) {
+            roman += getRomanTens(tens);
+        }
+        num %= 10;
+
+        // Process ones place
+        if (num > 0) {
+            roman += getRomanOnes(num);
+        }
+
+        return roman;
+    }
+
+    private static String getRomanThousands(int num) {
+        switch (num) {
+            case 1: return "M";
+            case 2: return "MM";
+            case 3: return "MMM";
+            case 4: return "MMMM";
+            case 5: return "MMMMM";
+            case 6: return "MMMMMM";
+            case 7: return "MMMMMMM";
+            case 8: return "MMMMMMMM";
+            case 9: return "MMMMMMMMM";
+            default: return "";
+        }
+    }
+
+    private static String getRomanHundreds(int num) {
+        switch (num) {
+            case 1: return "C";
+            case 2: return "CC";
+            case 3: return "CCC";
+            case 4: return "CD";
+            case 5: return "D";
+            case 6: return "DC";
+            case 7: return "DCC";
+            case 8: return "DCCC";
+            case 9: return "CM";
+            default: return "";
+        }
+    }
+
+    private static String getRomanTens(int num) {
+        switch (num) {
+            case 1: return "X";
+            case 2: return "XX";
+            case 3: return "XXX";
+            case 4: return "XL";
+            case 5: return "L";
+            case 6: return "LX";
+            case 7: return "LXX";
+            case 8: return "LXXX";
+            case 9: return "XC";
+            default: return "";
+        }
+    }
+
+    private static String getRomanOnes(int num) {
+        switch (num) {
+            case 1: return "I";
+            case 2: return "II";
+            case 3: return "III";
+            case 4: return "IV";
+            case 5: return "V";
+            case 6: return "VI";
+            case 7: return "VII";
+            case 8: return "VIII";
+            case 9: return "IX";
+            default: return "";
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to be converted into Roman numerals:");
+        int num = sc.nextInt();
+
+        System.out.println("Roman numeral: " + numberToRoman(num));
+    }
+}
+
+}

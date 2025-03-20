@@ -1,0 +1,57 @@
+package com.java.employ.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.java.employ.model.Employ;
+
+public class EmployDaoImpl implements EmployDao{
+	
+	static List<Employ> empList;
+	
+	static {
+		empList = new ArrayList<Employ>();
+	}
+
+	@Override
+	public List<Employ> showEmployDao() {
+		// TODO Auto-generated method stub
+		return empList;
+	}
+
+	@Override
+	public String addEmployDao(Employ employ) {
+		empList.add(employ);
+		return "Employ Record Inserted...";
+	}
+
+	@Override
+	public Employ searchEmployDao(int empno) {
+		Employ empFound = null;
+		for (Employ employ : empList) {
+			if(employ.getEmpno() == empno) {
+				empFound=employ;
+				break;
+			}
+		}
+		return empFound;
+	}
+
+	@Override
+	public String deleteEmployDao(int empno) {
+		Employ empFound = searchEmployDao(empno);
+		if (empFound != null) {
+			empList.remove(empFound);
+			return"Employ record deleted...";
+		}
+		return "***Employ record not found***";
+	}
+
+	@Override
+	public String updateEmployDao(int empno) {
+		Employ empFound = searchEmployDao(empno);
+		
+		return null;
+	}
+
+}

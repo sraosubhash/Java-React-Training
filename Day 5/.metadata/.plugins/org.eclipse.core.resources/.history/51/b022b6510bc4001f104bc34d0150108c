@@ -1,0 +1,25 @@
+package com.java.exception;
+
+import java.util.Scanner;
+
+public class DivEx {
+	
+	public static void main(String[] args) {
+		
+		int a,b,c = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter two numbers");
+		try {
+			a = sc.nextInt();
+			b= sc.nextInt();
+			c= a/b;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Division "+c);
+	}
+
+}

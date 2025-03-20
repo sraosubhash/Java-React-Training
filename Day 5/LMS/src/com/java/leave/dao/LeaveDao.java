@@ -1,0 +1,16 @@
+package com.java.leave.dao;
+
+import java.util.List;
+
+import com.java.leave.model.Leave;
+
+public interface LeaveDao {
+	
+	String addLeaveDao(Leave leave);
+	List<Leave> showLeaveDao();
+	Leave searchLeaveDao(int leaveid);
+	String deleteLeaveDao(int leaveid);
+	String updateLeaveDao(Leave levUpdate);
+	
+
+}

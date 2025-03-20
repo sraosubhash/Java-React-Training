@@ -1,0 +1,30 @@
+package com.java.collections;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetEx1 {
+	
+	public static void main(String[] args) {
+		Set names = new HashSet();
+		
+		names.add("ASH");
+		names.add("Subhash");
+		names.add("Zoro");
+		names.add("ASH");
+		names.add("Subhash");
+		names.add("Zoro");
+		names.add("ASH");
+		names.add("Subhash");
+		names.add("Zoro");
+		names.add("ASH");
+		names.add("Subhash");
+		names.add("Zoro");
+		
+		System.out.println("Data ");
+		for (Object object : names) {
+			System.out.println(object);
+		}
+	}
+
+}

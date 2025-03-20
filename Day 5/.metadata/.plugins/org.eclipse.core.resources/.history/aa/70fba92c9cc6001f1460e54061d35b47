@@ -1,0 +1,156 @@
+package com.java.employ.main;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.java.employ.blay.EmployBlay;
+import com.java.employ.exception.EmployException;
+import com.java.employ.model.Employ;
+import com.java.employ.model.Gender;
+
+public class EmployMain {
+	
+	static EmployBlay empBlay;
+	static Scanner sc;
+	static SimpleDateFormat sdf;
+	
+	static {
+		empBlay = new EmployBlay();
+		sc = new Scanner(System.in);
+		sdf = new SimpleDateFormat("yyyy-MM-dd");
+	}
+	
+	public static void addEmployMain() throws ParseException, EmployException {
+		
+		Employ emp = new Employ();
+		System.out.println("Enter Employ no ");
+		emp.setEmpno(sc.nextInt());
+		System.out.println("Enter Employ name ");
+		emp.setName(sc.next());
+		System.out.println("Enter Employ Gender (Male/Female) ");
+		emp.setGender(Gender.valueOf(sc.next()));
+		System.out.println("Enter Employ DOB in the format (yyyy-MM-dd) ");
+		emp.setDob(sdf.parse(sc.next()));
+		System.out.println("Enter Employ Department");
+		emp.setDept(sc.next());
+		System.out.println("Enter Employ Designation");
+		emp.setDesig(sc.next());
+		System.out.println("Enter Employ basic ");
+		emp.setBasic(sc.nextDouble());
+		
+		System.out.println(empBlay.addEmployBlay(emp));
+		
+	}
+	
+	public static void showEmployMain() {
+		
+		List<Employ> empList = empBlay.showEmployBlay();
+		for (Employ emp : empList) {
+			System.out.println(emp);
+			
+		}
+	}
+	
+	public static void searchEmployMain() {
+		
+		int empno;
+		System.out.println("Enter Employ number to be searched ");
+		empno = sc.nextInt();
+		Employ empFound = empBlay.searchEmployBlay(empno);
+		if (empFound != null) {
+			System.out.println(empFound);
+		}else {
+			System.out.println("***Record not found***");
+		}
+	}
+	
+	public static void deleteEmployMain() {
+		int empno;
+		System.out.println("Enter Employee number to delete record ");
+		empno = sc.nextInt();
+		System.out.println(empBlay.deleteEmplyBlay(empno));
+	}
+	
+	public static void updateEmployMain() throws EmployException, ParseException {
+		Employ emp = new Employ();
+		System.out.println("Enter Employ no ");
+		emp.setEmpno(sc.nextInt());
+		System.out.println("Enter Employ name ");
+		emp.setName(sc.next());
+		System.out.println("Enter Employ Gender (Male/Female) ");
+		emp.setGender(Gender.valueOf(sc.next()));
+		System.out.println("Enter Employ DOB in the format (yyyy-MM-dd) ");
+		emp.setDob(sdf.parse(sc.next()));
+		System.out.println("Enter Employ Department");
+		emp.setDept(sc.next());
+		System.out.println("Enter Employ Designation");
+		emp.setDesig(sc.next());
+		System.out.println("Enter Employ basic ");
+		emp.setBasic(sc.nextDouble());
+		
+		System.out.println(empBlay.addEmployBlay(emp));
+	}
+	
+	public static void writeEmployFileMain() throws IOException{
+		System.out.println(empBlay.writeEmployFileBlay());
+	}
+	
+	public static void readEmployFileMain() throws IOException, ClassNotFoundException{
+		System.out.println(empBlay.readEmployFileBlay());
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		int choice;
+		do {
+			System.out.println("-------------------");
+			System.out.println("O P T I O N S");
+			System.out.println("1. Add Employ");
+			System.out.println("2. Show Employ");
+			System.out.println("3. Search Employ");
+			System.out.println("4. Delete Employ");
+			System.out.println("5. Update Employ");
+			System.out.println("6. Exit");
+			System.out.println("Enter your choice - ");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			case 1:
+				try {
+					addEmployMain();
+				} catch (ParseException | EmployException e) {					
+					System.err.println("Error! "+e.getMessage());
+				} 
+				break;
+			case 2:
+				showEmployMain();
+				break;
+			case 3:
+				searchEmployMain();
+				break;
+			case 4:
+				deleteEmployMain();
+				break;
+			case 5:
+				try {
+					updateEmployMain();
+				} catch (ParseException | EmployException e) {					
+					System.err.println("Error! "+e.getMessage());
+				} 
+				break;
+			case 6:
+				return;
+			default:
+				System.out.println("Invalid choice");
+			}
+			
+		}while(choice!=6);
+	}
+
+
+}

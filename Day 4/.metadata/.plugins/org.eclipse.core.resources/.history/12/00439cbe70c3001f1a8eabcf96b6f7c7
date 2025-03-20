@@ -1,0 +1,18 @@
+package com.java.main;
+
+import java.util.Scanner;
+
+import com.java.employ.dao.EmployDao;
+import com.java.employ.dao.EmployDaoImpl;
+
+public class EmployMain {
+	
+	static Scanner sc;
+	static EmployDao empDao;
+	
+	static {
+		sc = new Scanner(System.in);
+		empDao = new EmployDaoImpl();
+	}
+
+}

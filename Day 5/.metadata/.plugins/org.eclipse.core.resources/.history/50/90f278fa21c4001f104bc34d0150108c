@@ -1,0 +1,35 @@
+package com.java.employ.main;
+
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+
+import com.java.employ.blay.EmployBlay;
+import com.java.employ.model.Employ;
+import com.java.employ.model.Gender;
+
+public class EmployMain {
+	
+	static EmployBlay empBlay;
+	static Scanner sc;
+	static SimpleDateFormat sdf;
+	
+	static {
+		empBlay = new EmployBlay();
+		sc = new Scanner(System.in);
+		sdf = new SimpleDateFormat("yyyy-MM-dd");
+	}
+	
+	public static void addEmployMain() {
+		
+		Employ emp = new Employ();
+		System.out.println("Enter Employ no ");
+		emp.setEmpno(sc.nextInt());
+		System.out.println("Enter Employ name ");
+		emp.setName(sc.next());
+		System.out.println("Enter Employ Gender (Male/Female) ");
+		emp.setGender(Gender.valueOf(sc.next()));
+		System.out.println("Enter Employ DOB in the format (yyyy-MM-dd) ");
+		emp.setDob(sdf.parse)
+	}
+
+}

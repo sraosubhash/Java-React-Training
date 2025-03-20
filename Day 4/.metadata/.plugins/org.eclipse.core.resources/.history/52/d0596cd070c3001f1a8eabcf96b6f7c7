@@ -1,0 +1,35 @@
+package com.java.main;
+
+import java.util.Scanner;
+
+import com.java.employ.dao.EmployDao;
+import com.java.employ.dao.EmployDaoImpl;
+import com.java.employ.model.Employ;
+
+public class EmployMain {
+	
+	static Scanner sc;
+	static EmployDao empDao;
+	
+	static {
+		sc = new Scanner(System.in);
+		empDao = new EmployDaoImpl();
+	}
+	
+	public static void AddEmployMain() {
+		Employ emp = new Employ();
+		System.out.println("Ente Employee number");
+		emp.setEmpno(sc.nextInt());
+		System.out.println("Enter Employee name ");
+		emp.setName(sc.next());
+		System.out.println("Enter Employee gender");
+		emp.setGender(sc.next());
+		System.out.println("Enter Employee Depertment");
+		emp.setDept(sc.next());
+		System.out.println("Enter Employee Designation");
+		emp.setDesig(sc.next());
+		System.out.println("Enter Employee basic");
+		emp.setBasic(sc.nextDouble());
+	}
+
+}

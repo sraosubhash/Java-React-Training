@@ -1,0 +1,12 @@
+package com.java.Properties;
+
+public class ReadOnlyEx {
+	
+	private int custId;
+	private String custName;
+	
+	
+	
+	
+
+}

@@ -1,0 +1,34 @@
+package com.java.employ.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.java.employ.model.Employ;
+
+public class EmployDaoImp implements EmployDao{
+	
+	
+	static Scanner sc;
+	static List<Employ> empList;
+	
+	static {
+		sc = new Scanner(System.in);
+		empList = new ArrayList<Employ>();
+	}
+
+	@Override
+	public String addEmployDao(Employ employ) {
+		empList.add(employ);
+		return "Employ record sucessuflly added...";
+	}
+
+	@Override
+	public List<Employ> showEmployDao() {
+		
+		return empList;
+	}
+	
+	
+
+}
