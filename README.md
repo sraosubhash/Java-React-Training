@@ -1,2 +1,2 @@
 # Java-Training
-Completed 30 days of Java training from basics to advance concepts including Springboot.
+Completed 30 days of Java-React-AWS training from basics to advance concepts.
