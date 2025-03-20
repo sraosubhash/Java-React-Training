@@ -1,0 +1,7 @@
+package brillio.JDBCRealTime;
+
+public enum gender {
+	
+	Male, Female
+
+}

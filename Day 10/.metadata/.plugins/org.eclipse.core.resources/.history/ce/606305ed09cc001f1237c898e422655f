@@ -1,0 +1,27 @@
+package com.java.junit;
+
+import java.sql.Date;
+
+enum AccountType{
+	SAVING, CURRENT, RECURRING
+}
+
+enum CheqFacil{
+	YES, NO
+}
+
+public class Bank {
+	
+	private int accountNo;
+	public String accountHoldername;
+	private Date dateOfOpen;
+	private String username;
+	private String password;
+	private String mobileNo;
+	private int optCode;
+	private String status;
+	private AccountType accountType;
+	private CheqFacil cheqFacil;
+	private double amount;
+
+}

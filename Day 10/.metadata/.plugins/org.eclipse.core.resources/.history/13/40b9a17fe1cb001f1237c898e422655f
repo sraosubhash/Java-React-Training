@@ -1,0 +1,15 @@
+package dao;
+
+
+import java.util.List;
+
+import model.LeaveDetails;
+
+public interface LeaveDao {
+	String createLeaveDetails(LeaveDetails leaveDetails) throws Exception;
+	List<LeaveDetails> getAllLeaveDetails() throws Exception;
+      String searchLeaveDetails(int leaveid) throws Exception;
+      String updateLeaveDetails(LeaveDetails leaveDetails) throws Exception;
+      String deleteLeaveDetails(int leaveid)throws Exception;
+	
+}

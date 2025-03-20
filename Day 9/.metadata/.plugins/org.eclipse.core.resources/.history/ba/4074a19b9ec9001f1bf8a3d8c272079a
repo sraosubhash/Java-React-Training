@@ -1,0 +1,21 @@
+package com.java.bank.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.java.bank.model.Accounts;
+import com.java.bank.util.ConnectionHelper;
+
+public class BankDaoImp implements BankDao{
+	
+	Connection connection;
+	PreparedStatement pst;
+
+	@Override
+	public String createAccount(Accounts accounts) throws ClassNotFoundException, SQLException {
+		connection = ConnectionHelper.getConnection();
+		
+	}
+
+}

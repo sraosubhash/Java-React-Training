@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BankTest" project="JUnitEx" tests="3" started="3" failures="1" errors="0" ignored="0">
+  <testsuite name="com.java.junit.BankTest" time="0.017">
+    <testcase name="testGettersAndSetters" classname="com.java.junit.BankTest" time="0.007"/>
+    <testcase name="testToString" classname="com.java.junit.BankTest" time="0.008">
+      <failure>
+        <expected>Bank [accountNo=1, accountHoldername=Ash, dateOfOpen=Wed Jan 01 00:00:00 IST 2025, username=ash, password=ash, mobileNo=911, optCode=911911, status=Active, accountType=SAVING, cheqFacil=NO, amount=898989.0]</expected>
+        <actual>Bank [accountNo=0, accountHoldername=null, dateOfOpen=null, username=null, password=null, mobileNo=null, optCode=0, status=null, accountType=null, cheqFacil=null, amount=0.0]</actual>
+        org.junit.ComparisonFailure: expected:&lt;Bank [accountNo=[1, accountHoldername=Ash, dateOfOpen=Wed Jan 01 00:00:00 IST 2025, username=ash, password=ash, mobileNo=911, optCode=911911, status=Active, accountType=SAVING, cheqFacil=NO, amount=898989].0]&gt; but was:&lt;Bank [accountNo=[0, accountHoldername=null, dateOfOpen=null, username=null, password=null, mobileNo=null, optCode=0, status=null, accountType=null, cheqFacil=null, amount=0].0]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.java.junit.BankTest.testToString(BankTest.java:64)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="BankConstructor" classname="com.java.junit.BankTest" time="0.001"/>
+  </testsuite>
+</testrun>

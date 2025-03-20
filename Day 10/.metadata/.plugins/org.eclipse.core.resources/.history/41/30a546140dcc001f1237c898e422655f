@@ -1,0 +1,16 @@
+package com.java.junit;
+
+import java.text.SimpleDateFormat;
+
+import org.junit.Test;
+
+public class BankTest {
+	
+	@Test
+	public void BankConstructor() {
+		Bank bank = new Bank();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Bank b1 = new Bank(1,"Ash",sdf.parse("2025-01-01"),"ash","ash","911",911911,"Active",AccountType.valueOf("SAVING"),CheqFacil.valueOf("NO"),85980);
+	}
+
+}

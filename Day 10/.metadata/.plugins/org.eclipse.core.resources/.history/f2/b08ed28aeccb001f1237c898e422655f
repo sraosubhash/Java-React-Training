@@ -1,0 +1,67 @@
+package com.java.threads;
+
+class Data{
+	void disMsg(String name) {
+		System.out.println("Hello "+name);
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("How are you.. ");
+	}
+}
+
+class Ash implements Runnable {
+	
+	Data data;
+	Ash(Data data){
+		this.data = data;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		data.disMsg("Ash");
+		
+	}
+}
+
+class Prasanna implements Runnable{
+	
+	Data data;
+	Prasanna (Data data){
+		this.data = data;
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		data.disMsg("Prasanna");
+		
+	}
+}
+
+class Venki implements Runnable{
+	
+	Data data;
+	Venki (Data data){
+		this.data = data;
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		data.disMsg("Prasanna");
+		
+	}
+}
+
+public class SynEx {
+
+}

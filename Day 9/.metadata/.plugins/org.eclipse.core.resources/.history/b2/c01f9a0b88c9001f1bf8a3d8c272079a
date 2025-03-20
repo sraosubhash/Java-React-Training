@@ -1,0 +1,10 @@
+package brillio.JDBCRealTime;
+
+public class Employ {
+	
+	private int empno;
+	
+
+}
+
+//driver, uri, username, password

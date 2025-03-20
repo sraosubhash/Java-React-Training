@@ -1,0 +1,29 @@
+package brillio.Exam_Project;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import com.java.agent.dao.AgentDao;
+import com.java.agent.model.Agent;
+import com.java.agent.model.Gender;
+
+public class AgentDaoImpTest {
+	
+	@Mock
+	private AgentDao agDaoMock;
+	
+	@Before
+	public void setUp() {
+		MockitoAnnotations.initMocks(this);
+	}
+	
+	@Test
+	public void testSearchAgent() {
+		Agent a1 = null;
+		Agent a2 = new Agent (100,"Ash","Mysore",Gender.MALE,0,87987.88);
+		
+	}
+
+}

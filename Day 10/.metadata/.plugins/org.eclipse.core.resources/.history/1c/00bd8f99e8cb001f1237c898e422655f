@@ -1,0 +1,27 @@
+package com.java.threads;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Thr1 implements Runnable{
+	@Override
+	public void run() {
+		List<String> names = new ArrayList<String>();
+		names.add("Subhash");
+		names.add("Ash");
+		names.add("Zoro");
+		names.add("Kirito");
+		
+		for (String s : names) {
+			System.out.println("ArrayList Data "+s);
+			Thread.sleep(1000);
+		}
+		
+	}
+}
+
+public class ThrEx2 {
+	
+	
+
+}

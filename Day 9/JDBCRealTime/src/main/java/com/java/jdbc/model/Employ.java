@@ -1,0 +1,68 @@
+package com.java.jdbc.model;
+
+public class Employ {
+	
+	private int empno;
+	private String ename;
+	private gender gender;
+	private String dept;
+	private String desig;
+	private double basic;
+	public Employ() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employ(int empno, String name, com.java.jdbc.model.gender gender, String dept, String desig, double basic) {
+		super();
+		this.empno = empno;
+		this.ename = name;
+		this.gender = gender;
+		this.dept = dept;
+		this.desig = desig;
+		this.basic = basic;
+	}
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + ename + ", gender=" + gender + ", dept=" + dept + ", desig="
+				+ desig + ", basic=" + basic + "]";
+	}
+	public int getEmpno() {
+		return empno;
+	}
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+	public String getName() {
+		return ename;
+	}
+	public void setName(String name) {
+		this.ename = name;
+	}
+	public gender getGender() {
+		return gender;
+	}
+	public void setGender(gender gender) {
+		this.gender = gender;
+	}
+	public String getDept() {
+		return dept;
+	}
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	public String getDesig() {
+		return desig;
+	}
+	public void setDesig(String desig) {
+		this.desig = desig;
+	}
+	public double getBasic() {
+		return basic;
+	}
+	public void setBasic(double basic) {
+		this.basic = basic;
+	}
+	
+	
+
+}

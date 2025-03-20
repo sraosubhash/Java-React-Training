@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BankTest" project="JUnitEx" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.java.junit.BankTest" time="0.091">
+    <testcase name="BankConstructor" classname="com.java.junit.BankTest" time="0.091"/>
+  </testsuite>
+</testrun>

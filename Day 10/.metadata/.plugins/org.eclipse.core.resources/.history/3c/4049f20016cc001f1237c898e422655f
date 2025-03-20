@@ -1,0 +1,22 @@
+package brillio.JDBCRealTime;
+
+import org.junit.Before;
+
+import com.java.jdbc.dao.EmployDao;
+import com.java.jdbc.model.gender;
+import com.java.jdbc.model.Employ;
+
+public class EmployDaoMockTest {
+	
+	@Mock
+	private EmployDao empDaoMock;
+	
+	@Before
+	public void setUp() {
+		MockitoAnnotation.initMocks(this);
+		
+	}
+	
+
+
+}

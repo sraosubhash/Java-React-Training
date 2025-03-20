@@ -1,0 +1,67 @@
+package com.java.junit;
+
+import static org.junit.Assert.assertEquals;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import org.junit.Test;
+
+public class BankTest {
+	
+	@Test
+	public void BankConstructor() throws ParseException {
+		Bank bank = new Bank();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Bank b1 = new Bank(1,"Ash",sdf.parse("2025-01-01"),"ash","ash","911",911911,"Active",AccountType.valueOf("SAVING"),CheqFacil.valueOf("NO"),898989);
+		assertEquals(1, b1.getAccountNo());
+		assertEquals("Ash", b1.getAccountHoldername());
+		assertEquals(sdf.parse("2025-01-01"),b1.getDateOfOpen());
+		assertEquals("ash", b1.getUsername());
+		assertEquals("ash", b1.getPassword());
+		assertEquals("911", b1.getMobileNo());
+		assertEquals(911911, b1.getOptCode());
+		assertEquals("Active", b1.getStatus());
+		assertEquals(AccountType.valueOf("SAVING"),b1.getAccountType());
+		assertEquals(CheqFacil.valueOf("NO"), b1.getCheqFacil());
+		assertEquals(898989, b1.getAmount(),0);
+	}
+	
+	@Test
+	public void testGettersAndSetters() throws ParseException {
+		Bank bank = new Bank();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		bank.setAccountNo(1);
+		bank.setAccountHoldername("Ash");
+		bank.setDateOfOpen(sdf.parse("2025-01-01"));
+		bank.setUsername("ash");
+		bank.setPassword("ash");
+		bank.setMobileNo("911");
+		bank.setOptCode(911911);
+		bank.setStatus("Active");
+		bank.setAccountType(AccountType.valueOf("SAVING"));
+		bank.setCheqFacil(CheqFacil.valueOf("NO"));
+		bank.setAmount(898989.12);
+		
+		assertEquals(1, bank.getAccountNo());
+		assertEquals("Ash", bank.getAccountHoldername());
+		assertEquals(sdf.parse("2025-01-01"),bank.getDateOfOpen());
+		assertEquals("ash", bank.getUsername());
+		assertEquals("ash", bank.getPassword());
+		assertEquals("911", bank.getMobileNo());
+		assertEquals(911911, bank.getOptCode());
+		assertEquals("Active", bank.getStatus());
+		assertEquals(AccountType.valueOf("SAVING"),bank.getAccountType());
+		assertEquals(CheqFacil.valueOf("NO"), bank.getCheqFacil());
+		assertEquals(898989, bank.getAmount(),2);
+	}
+	
+	@Test
+	public void testToString() {
+		Bank bank = new Bank();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String result = "Bank [accountNo=1, accountHoldername=Ash, dateOfOpen=Wed Jan 01 00:00:00 IST 2025, username=ash, password=ash, mobileNo=911, optCode=911911, status=Active, accountType=SAVING, cheqFacil=NO, amount=898989.12]";
+		assertEquals(result, bank.toString());	
+	}
+
+}

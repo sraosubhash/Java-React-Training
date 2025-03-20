@@ -1,0 +1,30 @@
+package com.java.junit;
+
+import static org.junit.Assert.assertEquals;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import org.junit.Test;
+
+public class BankTest {
+	
+	@Test
+	public void BankConstructor() throws ParseException {
+		Bank bank = new Bank();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Bank b1 = new Bank(1,"Ash",sdf.parse("2025-01-01"),"ash","ash","911",911911,"Active",AccountType.valueOf("SAVING"),CheqFacil.valueOf("NO"),898989);
+		assertEquals(1, b1.getAccountNo());
+		assertEquals("Ash", b1.getAccountHoldername());
+		assertEquals(sdf.parse("2025-01-01"),b1.getDateOfOpen());
+		assertEquals("ash", b1.getUsername());
+		assertEquals("ash", b1.getPassword());
+		assertEquals("911", b1.getMobileNo());
+		assertEquals(911911, b1.getOptCode());
+		assertEquals("Active", b1.getStatus());
+		assertEquals(AccountType.valueOf("SAVING"),b1.getAccountType());
+		assertEquals(CheqFacil.valueOf("NO"), b1.getCheqFacil());
+		assertEquals(898989, b1.getAmount(),0);
+	}
+
+}

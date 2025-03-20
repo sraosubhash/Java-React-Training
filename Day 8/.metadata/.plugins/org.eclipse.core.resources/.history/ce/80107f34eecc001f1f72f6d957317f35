@@ -1,0 +1,12 @@
+package brillio.Exam_Project;
+
+import org.junit.Test;
+
+public class AddAgentTest {
+	
+	@Test
+	public void addTest() {
+		
+	}
+
+}

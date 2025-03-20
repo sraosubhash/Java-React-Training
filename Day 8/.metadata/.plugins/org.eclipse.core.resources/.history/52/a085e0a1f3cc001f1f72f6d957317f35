@@ -1,0 +1,18 @@
+package com.java.agent.main;
+
+import java.util.Scanner;
+
+import com.java.agent.dao.AgentDao;
+import com.java.agent.dao.AgentDaoImp;
+
+public class agentSearchMain {
+	
+	public static void main(String[] args) {
+		AgentDao dao = new AgentDaoImp();
+		Scanner sc = new Scanner(System.in);
+		int agentid;
+		System.out.println("Enter Agent ID to search record");
+		
+	}
+
+}

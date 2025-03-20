@@ -1,0 +1,26 @@
+package brillio.Exam_Project;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.java.agent.dao.AgentDao;
+import com.java.agent.dao.AgentDaoImp;
+
+public class AgentDaoTest {
+	
+	AgentDao agDao;
+	
+	@Before
+	public void setUp() {
+		agDao = new AgentDaoImp();
+	}
+	
+	@Test
+	public void testShowAgent () {
+		assertEquals(5, agDao.showAgent().size());
+	}
+		
+
+}

@@ -1,0 +1,12 @@
+package com.java.agent.model;
+
+public class Agent {
+	
+	private int agentid;
+	private String name;
+	private String city;
+	private Gender gender;
+	private int MaritalStatus;
+	private double Premium;
+
+}

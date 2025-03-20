@@ -1,0 +1,22 @@
+package brillio.JDBCRealTime;
+
+import static org.junit.Assert.assertEquals;
+
+import com.java.jdbc.dao.EmployDao;
+import com.java.jdbc.dao.EmployDaoImp;
+
+public class EmployDaoTest {
+	
+	EmployDao empDao;
+	
+	@Before
+	public void setUp() {
+		empDao = new EmployDaoImp();
+	}
+	
+	@Test
+	public void testShowEmploy () {
+		assertEquals(8, empDao.showEmploy().size());
+	}
+
+}

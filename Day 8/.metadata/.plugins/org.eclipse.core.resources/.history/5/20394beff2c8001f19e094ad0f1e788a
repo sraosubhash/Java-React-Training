@@ -1,0 +1,27 @@
+package brillio.Maven_Demo;
+
+import java.util.Scanner;
+
+public class AddEmploy {
+	
+	public static void main(String[] args) {
+		
+		int empno;
+		double basic;
+		String name, dept,desig,gender;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter employ number ");
+		empno = sc.nextInt();
+		System.out.println("Enter Employ name");
+		name = sc.next();
+		System.out.println("Enter gender (Male/Female) ");
+		gender = sc.next();
+		System.out.println("Department ");
+		dept = sc.next();
+		System.out.println("Designation");
+		desig = sc.next();
+		System.out.println("Enter basic ");
+		basic = sc.nextDouble();
+	}
+
+}

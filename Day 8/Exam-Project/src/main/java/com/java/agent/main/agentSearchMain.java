@@ -1,0 +1,39 @@
+package com.java.agent.main;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import com.java.agent.dao.AgentDao;
+import com.java.agent.dao.AgentDaoImp;
+import com.java.agent.model.Agent;
+
+public class agentSearchMain {
+	
+	public static void main(String[] args) {
+		AgentDao dao = new AgentDaoImp();
+		Scanner sc = new Scanner(System.in);
+		int agentid;
+		System.out.println("Enter Agent ID to search record");
+		agentid = sc.nextInt();
+		try {
+//			System.out.println(dao.searchAgent(agentid));			
+			Agent agent = dao.searchAgent(agentid);
+			if (agent != null) {
+			System.out.println(agent);
+			}else {
+				System.out.println("not found");
+			}
+			for (String s : args) {
+				System.out.println(s);
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

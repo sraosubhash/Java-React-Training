@@ -1,0 +1,12 @@
+package com.java.bank.util;
+
+import java.sql.Connection;
+import java.util.ResourceBundle;
+
+public class ConnectionHelper {
+	
+	public static Connection getConnection() {
+		ResourceBundle rb = ResourceBundle.getBundle(db);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.java.junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DataTest {
+
+	@Test
+	public void testSayHello() {
+		Data data = new Data();
+		assertEquals("Welcome to Junit...", data.sayHello());
+	}
+	
+	@Test
+	public void testSum() {
+		Data data = new Data();
+		assertEquals(5, data.sum(2, 3));
+	}
+
+}

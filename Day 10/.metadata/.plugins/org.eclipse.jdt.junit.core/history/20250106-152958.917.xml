@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BankTest" project="JUnitEx" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.java.junit.BankTest" time="0.091">
+    <testcase name="testGettersAndSetters" classname="com.java.junit.BankTest" time="0.066"/>
+    <testcase name="testToString" classname="com.java.junit.BankTest" time="0.024"/>
+    <testcase name="BankConstructor" classname="com.java.junit.BankTest" time="0.0"/>
+  </testsuite>
+</testrun>

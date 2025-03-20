@@ -1,0 +1,12 @@
+package com.java.agent.dao;
+
+import java.sql.SQLException;
+
+import com.java.agent.model.Agent;
+
+public interface AgentDao {
+	
+	Agent searchAgentint (int agentid) throws SQLException, ClassNotFoundException;
+	
+
+}

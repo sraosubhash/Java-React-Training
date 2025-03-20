@@ -1,0 +1,5 @@
+package com.java.agent.model;
+
+public class Agent {
+
+}

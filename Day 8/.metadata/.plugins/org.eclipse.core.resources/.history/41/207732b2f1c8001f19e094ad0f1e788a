@@ -1,0 +1,21 @@
+package brillio.Maven_Demo;
+
+import java.util.Scanner;
+
+public class AddEmploy {
+	
+	public static void main(String[] args) {
+		
+		int empno;
+		double basic;
+		String name, dept,desig,gender;
+		Scanner sc = new Scanner(System.in);
+		empno = sc.nextInt();
+		name = sc.next();
+		gender = sc.next();
+		dept = sc.next();
+		desig = sc.next();
+		basic = sc.nextDouble();
+	}
+
+}

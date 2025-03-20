@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployDaoMockTest" project="JDBCRealTime" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="brillio.JDBCRealTime.EmployDaoMockTest" time="0.996">
+    <testcase name="testShowEmploy" classname="brillio.JDBCRealTime.EmployDaoMockTest" time="0.958"/>
+    <testcase name="testSearchEmploy" classname="brillio.JDBCRealTime.EmployDaoMockTest" time="0.038"/>
+  </testsuite>
+</testrun>

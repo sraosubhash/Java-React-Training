@@ -1,0 +1,50 @@
+package com.java.bank.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.java.bank.model.Accounts;
+import com.java.bank.util.ConnectionHelper;
+
+public class BankDaoImp implements BankDao{
+	
+	Connection connection;
+	PreparedStatement pst;
+	
+	public int generateAccountNo() throws ClassNotFoundException, SQLException {
+		connection = ConnectionHelper.getConnection();
+		
+		String cmd = "select case when max(accountno) is null then 1"
+				+"else max(accountno)+1 end accno from accounts;";
+		
+		pst = connection.prepareStatement(cmd);
+		ResultSet rs = pst.executeQuery();
+		rs.next();
+		int accno = rs.getInt("accno");
+		return accno;
+	}
+	
+	
+
+	@Override
+	public String createAccount(Accounts accounts) throws ClassNotFoundException, SQLException {
+		
+		connection = ConnectionHelper.getConnection();
+		int id = generateAccountNo();
+		String cmd = "insert into accounts values (?,?,?,?,?,?,?,?)";
+		pst = connection.prepareStatement(cmd);
+		pst.setInt(1, id);
+		pst.setString(2, accounts.getFirstName());
+		pst.setString(3, accounts.getLastName());
+		pst.setString(4, accounts.getCity());
+		pst.setString(5, accounts.getState());
+		pst.setDouble(6, accounts.getAmount());
+		pst.setString(7, accounts.getCheqFacil());
+		pst.setString(8, accounts.getAccountType());
+		
+		return "Account created with account no"+id;		
+	}
+
+}
