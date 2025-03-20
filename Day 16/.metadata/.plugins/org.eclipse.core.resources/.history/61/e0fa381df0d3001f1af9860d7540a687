@@ -1,0 +1,14 @@
+package com.java.hib;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="Answer")
+public class Answer {
+	
+	private int id;
+	private String answername;
+	private String postedBy;
+
+}

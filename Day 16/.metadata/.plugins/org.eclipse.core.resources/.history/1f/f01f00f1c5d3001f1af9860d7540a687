@@ -1,0 +1,5 @@
+package com.java.cr.model;
+
+public class Login {
+
+}

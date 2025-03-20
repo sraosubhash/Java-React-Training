@@ -1,0 +1,13 @@
+package com.java.cr.dao;
+
+import java.util.List;
+
+import com.java.cr.model.Employ;
+
+public interface EmployDao {
+	
+	List<Employ> showEmployDao();
+	Employ searchEmployDao(int empno);
+	List<String> showName();
+
+}

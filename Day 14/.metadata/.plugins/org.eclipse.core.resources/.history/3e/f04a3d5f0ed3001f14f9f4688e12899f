@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="3" align="center">
+<tr>
+    <th>Employ No</th>
+    <th>Employ Name</th>
+    <th>Employ Gender</th>
+    <th>Department</th>
+    <th>Designation</th>
+    <th>Basic</th>
+
+</tr>
+
+<jsp:useBean id="beanEmployDao" class="com.java.hib.dao.EmployDaoImpl"/>
+<c:set var="employList" value="${beanEmployDao.showEmployDao()}"/>
+<c:forE
+	<tr>
+		<td>  </td>
+		<td>  </td>
+		<td>  </td>
+		<td>  </td>
+
+
+</table>
+
+</body>
+</html>

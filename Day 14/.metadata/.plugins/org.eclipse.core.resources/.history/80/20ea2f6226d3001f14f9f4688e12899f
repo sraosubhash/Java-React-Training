@@ -1,0 +1,32 @@
+package com.java.agent.dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.java.agent.model.Agent;
+import com.java.agent.util.SessionHelper;
+
+public class AgentDaoImpl implements AgentDao{
+	
+	SessionFactory sessionFactory;
+	Session session;
+
+	@Override
+	public List<Agent> showAgent() {
+		sessionFactory = SessionHelper.getConnection();
+		session = sessionFactory.openSession();
+		Query query = session.createQuery("from Agent");
+		List <Agent> agentList = query.list();
+		return agentList;
+	}
+
+	@Override
+	public Agent searchAgent(int agentid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

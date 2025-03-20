@@ -1,0 +1,5 @@
+package com.java.cr.util;
+
+public class EncryptPassword {
+
+}
