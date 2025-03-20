@@ -1,0 +1,13 @@
+package com.java.jdbc.model;
+
+public class Employ {
+
+	private int empno;
+	private String ename;
+	private gender gender;
+	private String dept;
+	private String desig;
+	private double basic;
+	
+	
+}

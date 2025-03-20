@@ -1,0 +1,51 @@
+package com.java.spr.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.java.spr.model.Employ;
+
+public class EmployDaoImpl implements EmployDao{
+	
+	private JdbcTemplate jdbcTemplate;
+
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public List<Employ> showEmployDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employ searchEmployDao(int empno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addEmployDao(Employ employ) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateEmployDao(Employ employ) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteEmployDao(int empno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

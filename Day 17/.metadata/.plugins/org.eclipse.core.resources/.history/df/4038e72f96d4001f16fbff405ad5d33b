@@ -1,0 +1,19 @@
+package com.java.spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainProg {
+	
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/java/spring/HelloWorld.xml");
+		HelloWorld morning = (HelloWorld)ctx.getBean("bean1");
+		System.out.println(morning.show("Anoop"));
+		HelloWorld afternoon = (HelloWorld)ctx.getBean("bean2");
+		System.out.println(afternoon.show("Ash"));
+		HelloWorld evening = (HelloWorld)ctx.getBean("bean3");
+		System.out.println(evening.show("Subhash"));
+		
+	}
+
+}

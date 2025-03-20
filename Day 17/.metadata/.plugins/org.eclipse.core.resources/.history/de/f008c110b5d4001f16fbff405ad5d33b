@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+ 	<bean id="lunchData" class="com.java.spr.LunchBox">
+ 		<property name="snacks" value="Pasta"/>
+	</bean>
+	<bean id ="beanStudentAnoop" class="com.java.spr.Student">
+		<property name="sno" value="1"/>
+		<property name="name" value="Anoop"/>
+		<property name=""></property>
+	</bean>
+</beans>

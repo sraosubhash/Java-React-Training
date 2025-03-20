@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="beanPersonSubhash" class="com.java.spr.Person">
+		<property name="id" value="1"/>
+		<property name="name" value="Subhash"/>
+		<property name="jobDetails">
+			<bean class="com.java.spr.JobDetails">
+				<property name="job" value="IT"/>
+				<property name="company" value="Brillio"/>
+				<property name="location" value="Bangalore"/>
+			</bean>
+		</property>
+	</bean>
+</beans>

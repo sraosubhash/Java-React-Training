@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="jobData" class="com.java.spr.JobDetails">
+		<property name="job" value="IT"/>
+		<property name="company" value="Brillio"/>
+		<property name="location" value="Bangalore"/>
+	</bean>
+	<bean id="beanPersonSubhash" class="com.java.spr.Person">
+		<property name="id" value="1"/>
+		<property name="name" value="Subhash"/>
+		<property name="jobDetails" ref="jobData" />
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Mysore"/>
+				<property name="state" value="Karnataka"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="beanPersonAsh" class="com.java.spr.Person">
+		<property name="id" value="2"/>
+		<property name="name" value="Ash"/>
+		<property name="jobDetails" ref="jobData" />
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Raftel"/>
+				<property name="state" value="NewWorld"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="beanPersonZoro" class="com.java.spr.Person">
+		<property name="id" value="3"/>
+		<property name="name" value="Zoro"/>
+		<property name="jobDetails">
+			<bean class="com.java.spr.JobDetails">
+				<property name="job" value="PirateHunter"/>
+				<property name="company" value="StrawHats"/>
+				<property name="location" value="NewWorld"/>
+			</bean>
+		</property>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Shimotsuki"/>
+				<property name="state" value="EastBlue"/>
+			</bean>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,17 @@
+package Day2;
+
+public class EmpTest {
+	
+	public static void main(String[] args) {
+		Employ emp1 = new Employ();
+		emp1.empno = 1;
+		emp1.name = "ASH";
+		emp1.basic = 29876;
+		
+		Employ emp2 = new Employ();
+		emp2.empno = 2;
+		emp2.name = "Subhash";
+		emp2.basic = 47865;
+	}
+
+}

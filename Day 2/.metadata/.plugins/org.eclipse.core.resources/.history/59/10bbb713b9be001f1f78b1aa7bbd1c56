@@ -1,0 +1,45 @@
+package Day2;
+
+public class DuplicateNames {
+	
+	 public static void FDupliNames(String[] names) {
+	        
+	        boolean FoundDup = false;
+	        for (int i = 0; i < names.length; i++) {
+	          
+	            boolean Dupli = false;
+	          
+	            if (names[i] == null) {
+	                continue;
+	            }
+	            
+	            for (int j = i + 1; j < names.length; j++) {
+	                if (names[i].equals(names[j])) {
+	                   
+	                    names[j] = null;
+	                    Dupli = true;
+	                }
+	            }
+	            
+	            if (Dupli) {
+	                System.out.println(names[i]);
+	                FoundDup = true;
+	            }
+	        }
+	 
+	        if (!FoundDup) {
+	            System.out.println("No duplicate names found.");
+	        }
+	    }
+	 
+	 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] names = {"Dinesh", "Anoop", "Mounika", "Anoop", "Natraj", "Manish", "Anoop", "Manish"};
+ 
+        FDupliNames(names);
+    }
+ 
+   
+ 
+	}

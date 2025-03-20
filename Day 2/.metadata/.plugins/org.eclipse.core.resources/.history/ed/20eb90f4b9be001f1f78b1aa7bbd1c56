@@ -1,0 +1,31 @@
+package Day2;
+
+public class Palidrome {
+	
+	
+	public static boolean isPalindrome(String string) {
+        string = string.toLowerCase();
+        int start = 0, end = string.length() - 1;
+        while (start < end) {
+            if (string.charAt(start) != string.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+
+	public static void main(String[] args) {
+		   
+        String str = "This is Subhash in non orggro malyalam env with dad.";
+        String[] words = str.split("[^a-zA-Z]+");
+        for (String word : words) {
+            if (isPalindrome(word)) {
+                System.out.println(word);
+            }
+        }
+    }
+ 
+
+}

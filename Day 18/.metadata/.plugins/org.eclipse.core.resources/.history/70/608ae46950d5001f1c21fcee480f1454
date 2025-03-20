@@ -1,0 +1,5 @@
+package com.java.spr.dao;
+
+public class EmployDaoImpl {
+
+}

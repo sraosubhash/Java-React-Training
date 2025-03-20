@@ -1,0 +1,10 @@
+package com.java.spr;
+
+public class Person {
+	
+	private int id;
+	private String name;
+	private JobDetails jobDetails;
+	private Family familyDetails;
+
+}
