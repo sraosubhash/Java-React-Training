@@ -1,0 +1,7 @@
+package com.java.mvc.dao;
+
+public interface EmployDao {
+	
+	List<Employ> showEmployDao();
+
+}

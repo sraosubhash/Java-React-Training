@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\JavaTraining\Day16\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1953432466.index
+\SpringMvcHelloWorld\src\main\java
+C:\JavaTraining\Day16\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1966756202.index
+\SpringMvcJdbc\src\main\java

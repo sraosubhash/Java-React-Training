@@ -1,0 +1,4 @@
+spring.application.name=SbSecurity
+server.port=1122
+spring.security.user.name=subhash
+spring.security.user.password=subhash
